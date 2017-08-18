@@ -16,5 +16,8 @@ module SampleApp
     # NameError uninitialized-constant エラーが発生するのを回避するため
     # see: http://qiita.com/h5y1m141@github/items/97e1941086c7f9f229ac  
     config.autoload_paths += Dir[Rails.root.join('app', 'uploaders')] 
+    
+    # 認証トークンをremoteフォームに埋め込む
+    config.action_view.embed_authenticity_token_in_remote_forms = true
   end
 end
